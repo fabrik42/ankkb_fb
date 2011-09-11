@@ -21,13 +21,13 @@ set :google,   Hash[*ENV["ABKKB_GOOGLE"].split(",")]
 
 configure :development do
   set :redis, Redis.new
-  set :cache_ttl, 10
+  set :cache_ttl, 0
 end
 
 configure :production do
   uri = URI.parse(ENV["REDISTOGO_URL"])
   set :redis, Redis.new(:host => uri.host, :port => uri.port, :password => uri.password)
-  set :cache_ttl, 15 * 60  
+  set :cache_ttl, 30 * 60
 end
 
 get '/' do
