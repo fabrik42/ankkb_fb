@@ -10,7 +10,7 @@
   - %w[ events albums imprint ].each do |site|
     %url
       %loc= "http://www.ankkb.com/#{site}"
-      %lastmod= file_mtime("#{site}.haml")
+      %lastmod= file_mtime("#{site}.haml").xmlschema
       %changefreq weekly
       %priority= 0.6
 
