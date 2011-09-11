@@ -1,0 +1,17 @@
+- @meta_title = "Events in Hergershausen"
+- @meta_description = "Wir empfehlen folgende Veranstaltungen in und um Hergershausen."
+
+%h1= @meta_title
+
+%p= @meta_description
+
+%ol#events
+  - events.each do |event|
+    = haml(:_single_event, :layout => false, :locals => { :event => event })
+
+.hr_stars
+
+%h2.centered
+  Haben wir eine Veranstaltung vergessen?
+%p.centered
+  Sag uns einfach bescheid, wir nehmen sie gerne auf. :)

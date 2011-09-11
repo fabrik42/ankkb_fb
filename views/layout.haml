@@ -1,0 +1,65 @@
+!!! 5
+%meta{ "http-equiv" => "Content-Type", :content => "text/html; charset=utf-8" }
+%html{:lang => "en", :class => "no-js"}
+  %head
+    %meta{ :charset => "utf-8" }/
+    %meta{ "http-equiv" => "X-UA-Compatible", :content => "IE=edge,chrome=1" }/
+    %meta{ :name => "viewport", :content => "width=device-width, initial-scale=1.0" }/
+
+    %title= @meta_title
+    %meta{ :name => "description", :content => @meta_description }/
+    
+    %meta{:content => "ANKKB", :name => "author"}/
+    %meta{:content => "de", :name => "language"}/
+    
+    %meta{ :property => "og:title", :content => @meta_title }
+    %meta{ :property => "og:description", :content => @meta_description }        
+    %meta{ :property => "og:site_name", :content => "ANKKB" }
+    %meta{ :property => "og:type", :content => "non_profit" }
+    %meta{ :property => "og:image", :content => "http://ankkb.com/apple-touch-icon-114x114-precomposed.jpg" }
+    %meta{ :property => "fb:admins", :content => "1446137344" }
+
+    %link{ :rel => 'stylesheet', :type => 'text/css', :href => url('stylesheets/style.css') }
+
+    %script{ :type => 'text/javascript', :src =>  url('javascripts/libs/modernizr-2.0.6.min.js') }
+  %body{ :class => "" }
+    #container
+      %header
+        %a{:href => "/", :title => "ANKKB Startseite"}
+          %img{:alt => "ANNKB - Als noch ka Kerbborsche in Hergershausen", :src => "/images/header.jpg"}/
+
+      %nav
+        %ul
+          %li
+            %a{:href => url("/albums") } Bilder
+          %li
+            %a{:href => url("/events") } Veranstaltungen
+          %li
+            %a{:href => url("/imprint")} Impressum
+
+      #content{ :role => "main" }
+        = yield
+        .clear
+
+      %footer
+        .hr_stars
+        .like_box
+          :plain
+            <iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fhergershausen&amp;width=600&amp;colorscheme=light&amp;show_faces=true&amp;border_color=%23f0f0f0&amp;stream=false&amp;header=false&amp;height=258" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:600px; height:258px;" allowTransparency="true"></iframe>
+
+    %script{ :src => '//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js' }
+    -# fall back to local jQuery if necessary
+    :javascript
+      window.jQuery || document.write("<script src='/javascripts/libs/jquery.min.js'>\x3C/script>")
+    = javascript_includes
+    :javascript
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', '#{settings.google['analytics']}']);
+      _gaq.push(['_setDomainName', '.ankkb.com']);      
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();

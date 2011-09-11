@@ -1,0 +1,34 @@
+span.amp {
+  font-family: Baskerville, "Palatino Linotype", Palatino, Constantia, "Book Antiqua", Georgia, serif;
+  font-style: italic;
+}
+
+.arrow_up {
+	height: 15px;
+	width: 30px;
+	background-image: url(/images/arrow_n_f0f0f0.png);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	margin: 0 0 0 30px;
+        
+}
+
+* html .arrow_up {
+  background-position: left 3px;
+}
+
+
+@mixin arrow_left {
+	height: 30px;
+	width: 15px;
+	background-image: url(/images/arrow_w_f0f0f0.png);
+	background-repeat: no-repeat;
+	background-position: left top;
+	margin: 15px 0 0 5px;
+	float: left;
+}
+
+.arrow_left_hl {
+	@include arrow_left;
+	background-image: url(/images/arrow_w_999.png);
+}
