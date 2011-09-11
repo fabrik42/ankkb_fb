@@ -1,8 +1,6 @@
 - @meta_title =  event.name
 - @meta_description =  event.description
 
-%h2= Time.now
-
 %h1= event.name
 
 = haml(:_single_event, :layout => false, :locals => { :event => event, :standalone => true })

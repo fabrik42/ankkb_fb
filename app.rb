@@ -11,7 +11,7 @@ Time.zone = "Berlin"
 I18n.load_path << File.join(File.dirname(__FILE__), 'config', 'locales.yml')
 I18n.locale = :de
 
-Sinatra.register Assets#::Helpers
+Sinatra.register Assets
 Sinatra.register Text
 
 set :public,   File.dirname(__FILE__) + '/public'
