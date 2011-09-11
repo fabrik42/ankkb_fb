@@ -40,7 +40,7 @@ module Facebook
         data
       end
 
-      def cache_read(key)        
+      def cache_read(key)
         cached = settings.redis.get(key)
         cached ? JSON.parse(cached) : nil
       end

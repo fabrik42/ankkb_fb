@@ -8,13 +8,13 @@
 
     %title= @meta_title
     %meta{ :name => "description", :content => @meta_description }/
-    
+
     %meta{:content => "ANKKB", :name => "author"}/
     %meta{:content => "de", :name => "language"}/
-    
+
     %meta{ :property => "og:title", :content => @meta_title }
-    %meta{ :property => "og:description", :content => @meta_description }        
-    %meta{ :property => "og:language", :content => "de" }        
+    %meta{ :property => "og:description", :content => @meta_description }
+    %meta{ :property => "og:language", :content => "de" }
     %meta{ :property => "og:site_name", :content => "ANKKB" }
     %meta{ :property => "og:type", :content => "non_profit" }
     %meta{ :property => "og:image", :content => "http://ankkb.com/apple-touch-icon-114x114-precomposed.png" }
@@ -56,7 +56,7 @@
     :javascript
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', '#{settings.google['analytics']}']);
-      _gaq.push(['_setDomainName', '.ankkb.com']);      
+      _gaq.push(['_setDomainName', '.ankkb.com']);
       _gaq.push(['_trackPageview']);
 
       (function() {
