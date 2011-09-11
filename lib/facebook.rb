@@ -21,7 +21,7 @@ module Facebook
     end
 
     def path
-      "#{resource_name}/#{id}/#{name.parameterize}"
+      "#{self.class.resource_name}/#{id}/#{name.parameterize}"
     end
 
     class << self

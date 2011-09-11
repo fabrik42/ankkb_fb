@@ -7,7 +7,7 @@
   .col_r
     - unless locals[:standalone]
       %h2
-        %a{ :href => url("/events/#{event.id}/#{event.name.parameterize}"), :itemprop => "url" }
+        %a{ :href => url(event.path), :itemprop => "url" }
           %span{ :itemprop => "summary" }= event.name
     %p.location{ :itemprop => "address", :itemscope => "itemscope", :itemtype => "http://data-vocabulary.org/Address" }
       %strong
