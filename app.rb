@@ -34,6 +34,11 @@ get '/' do
   haml :index
 end
 
+get '/about' do
+  page = Facebook::Page.load
+  haml :about, :locals => { :page => page }
+end
+
 get '/albums' do
   albums = Facebook::Album.all
   haml :albums, :locals => { :albums => albums }

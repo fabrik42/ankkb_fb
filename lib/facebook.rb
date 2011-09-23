@@ -3,6 +3,12 @@ $:.unshift(File.expand_path(File.dirname(__FILE__))) unless
 
 module Facebook
 
+  autoload :Album, "facebook/album"
+  autoload :Event, "facebook/event"
+  autoload :Page,  "facebook/page"
+  autoload :Photo, "facebook/photo"
+  autoload :User,  "facebook/user"
+
   class GraphObject < Struct.new(:data)
     def initialize(data)
       self.data = data
@@ -67,11 +73,6 @@ module Facebook
 
     end
   end
-
-  autoload :Album, "facebook/album"
-  autoload :Event, "facebook/event"
-  autoload :Photo, "facebook/photo"
-  autoload :User,  "facebook/user"
 end
 
 

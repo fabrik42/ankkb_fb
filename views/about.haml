@@ -1,0 +1,10 @@
+- @meta_title =  "Über uns"
+- @meta_description =  page.mission
+
+%h1= @meta_title
+
+.hr_stars
+%h2.centered= nl2br(page.mission)
+.hr_stars
+
+= simple_format(page.description, :class => "description")
