@@ -3,31 +3,31 @@ html, body {
 }
 
 html {
-	background-image: url(/images/beer_bg.png);
-	background-repeat: repeat-y repeat-x;
-	overflow: -moz-scrollbars-vertical;
+  background-image: url(/images/beer_bg.png);
+  background-repeat: repeat-y repeat-x;
+  overflow: -moz-scrollbars-vertical;
 }
 
 body {
   font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
-	text-align: center;
-	margin: 0;
+  text-align: center;
+  margin: 0;
 }
 
 #container {
-	background-image: url(/images/wrapper_bg.png);
-	background-position: center;
-	background-repeat: repeat-y;
-	width: 720px;
+  background-image: url(/images/wrapper_bg.png);
+  background-position: center;
+  background-repeat: repeat-y;
+  width: 720px;
   height: 100%;
   min-height: 100%;  
   height: auto !important;
-	
-	color: $white;
-	
-	margin: 0px auto;
-	padding: 0;
-	text-align: left;	
+  
+  color: $white;
+  
+  margin: 0px auto;
+  padding: 0;
+  text-align: left;  
 }
 
 header {
@@ -36,38 +36,38 @@ header {
 }
 
 nav {
-	font-family:Georgia,serif;  
-	font-size: 100%;
-	font-style: normal;
-	font-weight: normal;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	line-height: 1.7em;
-	
-	height: 50px;
-	
-	text-align: center;
-	display: table;   /* Allow the centering to work */
-	margin: 0 auto;
+  font-family:Georgia,serif;  
+  font-size: 100%;
+  font-style: normal;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.7em;
+  
+  height: 50px;
+  
+  text-align: center;
+  display: table;   /* Allow the centering to work */
+  margin: 0 auto;
 }
 
 nav a {
-	color: $white;
+  color: $white;
 }
 
 nav ul {
-	list-style: none;
+  list-style: none;
 }
 
 nav ul li {
-	display: inline;
-	margin: 0 10px;
+  display: inline;
+  margin: 0 10px;
 }
 
 
 #content {
-	clear: both;
-	padding: 0 40px 0;
+  clear: both;
+  padding: 0 40px 0;
 }
 
 footer {

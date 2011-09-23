@@ -1,7 +1,7 @@
 - @meta_title =  album.name
 - @meta_description =  album.description
 
-%h1= album.name
+%h1= @meta_title
 
 %ul#images{ :data => { :collection => "photos" } }
   - album.photos.each do |photo|
