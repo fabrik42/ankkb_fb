@@ -22,4 +22,5 @@ gem "awesome_print"
 
 group :development do
   gem "shotgun"
+  gem "foreman"
 end
