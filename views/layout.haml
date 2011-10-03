@@ -23,7 +23,6 @@
     %link{ :rel => 'stylesheet', :type => 'text/css', :href => url('stylesheets/style.css') }
 
     %script{ :type => 'text/javascript', :src =>  url('javascripts/libs/modernizr-2.0.6.min.js') }
-    = javascript_includes
     :javascript
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', '#{settings.google['analytics']}']);
@@ -66,3 +65,4 @@
     -# fall back to local jQuery if necessary
     :javascript
       window.jQuery || document.write("<script src='/javascripts/libs/jquery.min.js'>\x3C/script>")
+    = javascript_includes      
