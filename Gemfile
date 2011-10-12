@@ -20,7 +20,11 @@ gem "tzinfo"
 
 gem "awesome_print"
 
-group :development do
+group :development, :test do
   gem "shotgun"
   gem "foreman"
+
+  gem "rack-test"
+  gem "rspec"
+  gem "nokogiri"
 end
