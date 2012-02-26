@@ -21,5 +21,5 @@
       %span.country{ :itemprop => "country-name" }= event.address["country"]
     %time{ :itemprop => "startDate", :datetime => event.start.iso8601 }
       = event.date
-    %p{ :itemprop => "description" }
-      = nl2br(event.description)
+    %div{ :itemprop => "description" }
+      = simple_format(linkify(event.description))
