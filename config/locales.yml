@@ -68,6 +68,7 @@ de:
       long: "%A, %d. %B %Y, %H:%M Uhr"
       time: "%H:%M"
       starting: "%A, %d. %B %Y, ab %H:%M Uhr"
+      date: "%d.%m.%Y"
 
     am: "vormittags"
     pm: "nachmittags"
