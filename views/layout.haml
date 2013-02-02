@@ -8,6 +8,7 @@
 
     %title= site_title(@meta_title)
     %meta{ :name => "description", :content => @meta_description }/
+    %meta{ :name => "keywords", :content => "ankkb, Hergershausen, Kerbborsche, Hergershäuser Kerb, Postleitzahl: 64832, Babenhausen (Hessen), Vorwahl: 06073" }/
 
     %meta{:content => "ANKKB", :name => "author"}/
     %meta{:content => "de", :name => "language"}/
@@ -37,19 +38,19 @@
   %body{ :class => "" }
     #container
       %header
-        %a{:href => "/", :title => "ANKKB Startseite"}
+        %a{:href => "/", :title => "Startseite - Als noch ka Kerbborsche Hergershausen"}
           %img{:alt => "ANNKB - Als noch ka Kerbborsche in Hergershausen", :src => "/images/header.jpg"}/
 
       %nav
         %ul
           %li
-            %a{:href => url("/about") } Über uns
+            %a{:href => url("/about"), :title => "Wer ist ANKKB Hergershausen?" } Über uns
           %li
-            %a{:href => url("/albums") } Bilder
+            %a{:href => url("/albums"), :title => "Fotos von Veranstaltungen in Hergershausen" } Bilder
           %li
-            %a{:href => url("/events") } Veranstaltungen
+            %a{:href => url("/events"), :title => "Events in unserem schönen Hergershausen" } Veranstaltungen
           %li
-            %a{:href => url("/imprint")} Impressum
+            %a{:href => url("/imprint"), :title => "Kontaktdaten der ANKKB Hergershausen" } Impressum
 
       #content{ :role => "main" }
         = yield

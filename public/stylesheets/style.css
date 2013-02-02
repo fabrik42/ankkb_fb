@@ -177,6 +177,10 @@ h2 a { color: #999999; }
 
 .facebook { background: url("/images/facebook.png") center left no-repeat; height: 20px; min-height: 20px; height: auto !important; padding: 0 0 0 20px; line-height: 20px; }
 
+dt { width: 200px; float: left; margin: 0 20px 0 0; display: block; font-weight: bold; padding: 5px 0; }
+
+dd { margin: 0; padding: 5px 0; display: block; }
+
 #images { list-style: none; margin: 0; padding: 0; }
 
 #images li { width: 190px; margin: 10px; display: inline-block; vertical-align: top; }
