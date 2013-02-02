@@ -179,7 +179,7 @@ h2 a { color: #999999; }
 
 #images { list-style: none; margin: 0; padding: 0; }
 
-#images li { width: 190px; float: left; margin: 10px; }
+#images li { width: 190px; margin: 10px; display: inline-block; vertical-align: top; }
 
 #images a.img_wrap { display: block; width: 180px; padding: 4px; background: #1a171b; border: 1px solid #333333; }
 
