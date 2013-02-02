@@ -1,5 +1,14 @@
 module Text
 
+  def site_title(title = nil)
+    postfix = "ANKKB Hergershausen"
+    if title
+      "#{title} - #{postfix}"
+    else
+      postfix
+    end
+  end
+
   def linkify(text)
     text = text.to_s.dup
     generic_URL = Regexp.new('(^|[\n ])([\w]+?://[\w]+[^ \"\n\r\t<]*)', Regexp::MULTILINE | Regexp::IGNORECASE)
@@ -14,7 +23,7 @@ module Text
       :class => ""
     })
     start_tag = "<p class=\"#{options[:class]}\">"
-    
+
     text = '' if text.nil?
     text = text.dup.to_str
     text.gsub!(/\r\n?/, "\n")                    # \r\n and \r -> \n
