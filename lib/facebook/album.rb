@@ -20,7 +20,7 @@ class Facebook::Album < Facebook::GraphObject
       album_data, photos = cache(id) do
         graph.batch do |batch_api|
           batch_api.get_object(id)
-          batch_api.get_connections(id, "photos")
+          batch_api.get_connections(id, "photos", :limit => 200)
         end
       end
 
@@ -35,8 +35,19 @@ class Facebook::Album < Facebook::GraphObject
       end.collect{ |album| new album }
 
       # sort out profile images
-      albums.select{|album| album.type != "profile" }
+      albums.reject{|album| exclude_album? album }
     end
+
+    def exclude_album?(album)
+      if album.type == "profile"
+        true
+      elsif album.name == "Cover Photos"
+        true
+      else
+        false
+      end
+    end
+
   end
 
 end
