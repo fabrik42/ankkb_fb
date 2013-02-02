@@ -12,11 +12,12 @@
     %p.location{ :itemprop => "address", :itemscope => "itemscope", :itemtype => "http://data-vocabulary.org/Address" }
       %strong
         = event.address["location"]
-      = "("
-      %span.street{ :itemprop => "street-address" }>= event.address["street"]
-      = ",&nbsp;" if event.address["street"]
-      %span.city{ :itemprop => "locality" }>= event.address["city"]\
-      = ")"
+      - if event.address["street"] && event.address["city"]
+        = "("
+        %span.street{ :itemprop => "street-address" }>= event.address["street"]
+        = ",&nbsp;" if event.address["street"]
+        %span.city{ :itemprop => "locality" }>= event.address["city"]\
+        = ")"
       %span.region{ :itemprop => "region" }= event.address["state"]
       %span.country{ :itemprop => "country-name" }= event.address["country"]
     %time{ :itemprop => "startDate", :datetime => event.start.iso8601 }
