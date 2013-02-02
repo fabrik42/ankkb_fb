@@ -22,7 +22,7 @@ module Facebook
       data["name"]
     end
 
-    def upated_at
+    def updated_at
       Time.zone.parse data["updated_time"]
     end
 

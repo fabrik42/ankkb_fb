@@ -17,13 +17,13 @@
   - Facebook::Event.all.each do |event|
     %url
       %loc= "http://www.ankkb.com/#{event.path}"
-      %lastmod= event.upated_at.xmlschema
+      %lastmod= event.updated_at.xmlschema
       %changefreq daily
       %priority= 0.8
 
   - Facebook::Album.all.each do |album|
     %url
       %loc= "http://www.ankkb.com/#{album.path}"
-      %lastmod= album.upated_at.xmlschema
+      %lastmod= album.updated_at.xmlschema
       %changefreq monthly
       %priority= 0.4
