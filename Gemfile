@@ -1,6 +1,6 @@
 source :rubygems
 
-gem "koala", "~> 1.2.0beta"
+gem "koala"#, "~> 1.2.0beta"
 
 gem "redis"
 gem "json"
@@ -21,6 +21,7 @@ gem "tzinfo"
 gem "awesome_print"
 
 group :development, :test do
+  gem "heroku"
   gem "shotgun"
   gem "foreman"
 
