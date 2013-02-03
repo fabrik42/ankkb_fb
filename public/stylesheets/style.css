@@ -153,6 +153,12 @@ nav ul li { display: inline; margin: 0 10px; }
 
 footer { margin: 0; padding: 0 40px 20px; clear: both; }
 
+.footer_links { margin: 0; padding: 0; border: 0; overflow: hidden; *zoom: 1; font-size: 0.85em; }
+.footer_links li { list-style-image: none; list-style-type: none; margin-left: 0px; white-space: nowrap; display: inline; float: right; padding-left: 10px; padding-right: 10px; }
+.footer_links li:first-child, .footer_links li.first { padding-right: 0; }
+.footer_links li:last-child { padding-left: 0; }
+.footer_links li.last { padding-left: 0; }
+
 a { outline: none; /** link-colors($normal, $hover, $active, $visited, $focus) **/ color: #f0f0f0; }
 a:visited { color: #f0f0f0; }
 a:focus { color: #999999; }

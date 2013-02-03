@@ -1,4 +1,21 @@
+# encoding: UTF-8
 module Text
+
+  def site_keywords(keywords)
+    keywords = [] if keywords.nil?
+
+    default_keywords = [
+      "ankkb",
+      "Hergershausen",
+      "Kerbborsche",
+      "Hergershäuser Kerb",
+      "Postleitzahl: 64832",
+      "Babenhausen (Hessen)",
+      "Vorwahl: 06073"
+    ]
+
+    (keywords + default_keywords)[0...10].join ", "
+  end
 
   def site_title(title = nil)
     postfix = "ANKKB Hergershausen"

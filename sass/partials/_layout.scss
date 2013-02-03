@@ -75,3 +75,8 @@ footer {
   padding: 0 40px 20px;
   clear: both;
 }
+
+.footer_links {
+  @include horizontal-list(10px, right);
+  font-size: 0.85em;
+}

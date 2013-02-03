@@ -7,7 +7,7 @@
 
     %title= site_title(@meta_title)
     %meta{ :name => "description", :content => @meta_description }/
-    %meta{ :name => "keywords", :content => "ankkb, Hergershausen, Kerbborsche, Hergershäuser Kerb, Postleitzahl: 64832, Babenhausen (Hessen), Vorwahl: 06073" }/
+    %meta{ :name => "keywords", :content => site_keywords(@meta_keywords) }/
 
     %meta{:content => "ANKKB", :name => "author"}/
     %meta{:content => "de", :name => "language"}/
@@ -60,6 +60,15 @@
         .like_box
           :plain
             <iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fhergershausen&amp;width=600&amp;colorscheme=light&amp;show_faces=true&amp;border_color=%23f0f0f0&amp;stream=false&amp;header=false&amp;height=258" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:600px; height:258px;" allowTransparency="true"></iframe>
+
+
+        %ul.footer_links
+          %li
+            %a{ :href => "https://plus.google.com/105234261644752334742", :rel => "publisher" }
+              ankkb auf Google+
+          %li
+            %a{ :href => "http://facebook.com/hergershausen" }
+              ankkb auf Facebook
 
     %script{ :src => '//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js' }
     -# fall back to local jQuery if necessary

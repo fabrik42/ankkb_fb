@@ -74,8 +74,3 @@ module Facebook
     end
   end
 end
-
-
-
-
-
