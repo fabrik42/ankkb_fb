@@ -27,7 +27,7 @@ end
 configure :production do
   uri = URI.parse(ENV["REDISTOGO_URL"])
   set :redis, Redis.new(:host => uri.host, :port => uri.port, :password => uri.password)
-  set :cache_ttl, 0#30 * 60
+  set :cache_ttl, 30 * 60
 end
 
 get '/' do
