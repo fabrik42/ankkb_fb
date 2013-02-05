@@ -20,10 +20,25 @@ module Text
   def site_title(title = nil)
     postfix = "ANKKB Hergershausen"
     if title
-      "#{title} - #{postfix}"
+      "#{truncate(title, 50)} - #{postfix}"
     else
       postfix
     end
+  end
+
+  def site_description(description)
+    truncate(description, 156).gsub(/<\/?[^>]*>/, "")
+  end
+
+  def d(date, format)
+    I18n.l(date, :format => format)
+  end
+
+  def truncate(text, length)
+    omission = "..."
+    text = text.dup
+    return text if text.size < length
+    text[0...(length-omission.length)] + omission
   end
 
   def linkify(text)

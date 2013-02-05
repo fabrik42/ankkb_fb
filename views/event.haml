@@ -1,8 +1,8 @@
-- @meta_title =  event.name
-- @meta_description =  event.description
+- @meta_title =  "#{d(event.start, "%d.%m.")} #{event.name}"
+- @meta_description =  "#{d(event.start, "%d. %B %Y")}: #{event.description}"
 - @meta_keywords = event.name.split + %w{ Events Veranstaltungen Kalender Veranstaltungskalender Feier Party Fest }
 
-%h1= @meta_title
+%h1= "#{event.name} am #{d(event.start, "%d.%m.")}"
 
 = haml(:_single_event, :layout => false, :locals => { :event => event, :standalone => true })
 
