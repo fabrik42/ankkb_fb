@@ -1,5 +1,5 @@
 - @meta_title =  "#{d(event.start, "%d.%m.")} #{event.name}"
-- @meta_description =  "#{d(event.start, "%d. %B %Y")}: #{event.description}"
+- @meta_description =  "#{d(event.start, "%d. %B %Y")}: #{event.description || event.name}"
 - @meta_keywords = event.name.split + %w{ Events Veranstaltungen Kalender Veranstaltungskalender Feier Party Fest }
 
 %h1= "#{event.name} am #{d(event.start, "%d.%m.")}"
