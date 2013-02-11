@@ -1,0 +1,93 @@
+- @meta_title =  "Über Hergershausen"
+- @meta_description = "Hergershausen: Informationen rund um die Heimat von ANKKB"
+- @meta_keywords = %w{ Hergershausen Babenhausen Hessen Postleitzahl:64832 Vorwahl:06073 Darmstadt Dieburg Bahnhof Gersprenz }
+
+%h1 Hergershausen
+
+%p Das schöne Dorf Hergershausen liegt in Hessen im Landkreis Darmstadt-Dieburg und ist mit über 2000 Einwohnern der größte von fünf Stadtteilen der Stadt Babenhausen.
+
+%p Erstmals erwähnt wurde Hergershausen im Jahre 1340, damals noch in Hanauer Besitz. Bis 1972 war Hergershausen eine eigenständige Gemeinde, kam dann allerdings im Zuge der hessischen Gemeindereform zur Stadt Babenhausen.
+
+%p Hergershausen bietet ein großes Naturschutzgebiet rund um die renaturierte Gesprenz, das schon seit über 30 Jahren existiert.
+
+%p Hergershausen ist umgeben von den Ortschaften Eppertshausen, Sickenhofen, Harpertshausen und Münster.
+
+.hr_stars
+
+%h2 Informationen zu Hergershausen
+
+%dl
+  %dt Stadt
+  %dd Babenhausen
+
+  %dt Landkreis
+  %dd Darmstadt-Dieburg
+
+  %dt Regierungsbezirk
+  %dd Darmstadt
+
+  %dt Postleitzahl
+  %dd 64832
+
+  %dt Vorwahl
+  %dd 06073
+
+  %dt KFZ-Kennzeichen
+  %dd DA, DI
+
+  %dt Einwohner
+  %dd über 2000
+
+  %dt Breitengrad
+  %dd 49.941
+
+  %dt Längengrad
+  %dd 8.911
+
+  %dt Höhenlage
+  %dd 132m über Normalnull
+
+  %dt Naturschutzgebiete (NSG)
+  %dd Hergershäuser Wiesen, seit 1984
+
+  %dt Auszeichnungen
+  %dd Unser Dorf hat Zukunft, 2005
+
+  %dt Kirchen
+  %dd evangelische Kirche (erbaut 1712)
+
+  %dt Bahnanbindung
+  %dd
+    Rhein-Main-Bahn
+    %br
+    Darmstadt Hauptbahnhof – Aschaffenburg Hauptbahnhof
+
+  %dt Bushaltestellen (RMV)
+  %dd Bahnhof, Jahnstraße, Schule
+
+  %dt Anliegende Straßen
+  %dd Bundesstraße B26, Kreisstraße 183
+
+  %dt Anliegende Flüsse
+  %dd Gersprenz, Semme, Herrngraben, Flurgraben, Ohlebach
+
+  %dt Inoffizielle Website
+  %dd
+    %a{ :href => "http://www.hergershausen.org/" } hergershausen.org
+
+  %dt Website Stadtverwaltung
+  %dd
+    %a{ :href => "http://www.babenhausen.de/de/unsere-stadt/gegenwart/stadtteile/hergershausen.aspx" } www.babenhausen.de
+
+  %dt Wikipedia-Link
+  %dd
+    %a{ :href => "http://de.wikipedia.org/wiki/Hergershausen_(Babenhausen)" } Hergershausen (Babenhausen)
+
+.hr_stars
+
+%h2 Aktuelle Veranstaltungen in Hergershausen
+
+%ul
+  - events.first(3).each do |event|
+    %li
+      %a{ :href => url(event.path) }= event.name

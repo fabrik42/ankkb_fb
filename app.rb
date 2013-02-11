@@ -39,6 +39,11 @@ get '/about' do
   haml :about, :locals => { :page => page }
 end
 
+get '/hergershausen' do
+  events = Facebook::Event.all
+  haml :hergershausen, :locals => { :events => events }
+end
+
 get '/albums' do
   albums = Facebook::Album.all
   haml :albums, :locals => { :albums => albums }
